@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- Sezione librerie aggiuntive. Eventuali librerie vanno aggiunte nella
+		cartella lib dell'applicazione e tramite queste impostazioni vengono considerate
+		dal classLoader -->
+	<libraries>
+		<library>smarty</library>
+		<library>pyrus/php</library>
+		<library>PHPMailer</library>
+		<library>PHPExcel</library>
+        <library>tcpdf</library>
+	</libraries>
+
+	<!-- Impostazioni personalizzate per php -->
+	<php>
+		<date.timezone>Europe/Rome</date.timezone>
+		<display_errors>off</display_errors>
+	</php>
+
+	<!-- Parametri specifici per i renderer -->
+	<rendering>
+		<smarty>
+			<compile_dir>${app.rootdir}/cache/smarty/compiled</compile_dir>
+			<cache_dir>${app.rootdir}/cache/smarty/cache</cache_dir>
+		</smarty>
+	</rendering>
+
+	<report>
+		<consuntivazione_generale>
+	   		<template>${app.rootdir}/report/consuntivazioni_generale.xlsx</template>
+		</consuntivazione_generale>
+		<consuntivazione_consulente>
+			<template>${app.rootdir}/report/consuntivazioni_consulente.xlsx</template>
+		</consuntivazione_consulente>
+		<consumi>
+			<template>${app.rootdir}/report/consumi.xls</template>
+		</consumi>
+		<chiamate>
+			<template>${app.rootdir}/report/chiamate.xls</template>
+		</chiamate>
+		<contatti>
+			<template>${app.rootdir}/report/contatti.xls</template>
+		</contatti>                
+	</report>
+
+	<temp-dir>${app.rootdir}/tmp</temp-dir>
+
+
+	<!-- Parametri relativi al db -->
+	<persistence>
+
+		<!-- Hash per offuscamento password -->
+		<salt>SALT</salt>
+        <key>KEY</key>
+
+		<db_dataobject>
+			<!-- Stringa per connessione al dbms -->
+			<database>pgsql://dbuser:pass@192.168.100.252/demo</database>
+            <schema_location>${app.confdir}</schema_location>
+            <require_prefix>${app.libdir}/demo/db</require_prefix>
+            <class_prefix></class_prefix>
+            <db_driver>MDB2</db_driver>
+            <!--<ignore_sequence_keys>ALL</ignore_sequence_keys>-->
+            <debug>0</debug>
+            <dont_die>0</dont_die>
+            <quote_identifiers>1</quote_identifiers>
+            <proxy></proxy>
+		</db_dataobject>
+
+	</persistence>
+
+	<!-- Parametri per invio email -->
+	<mail>
+
+		<!-- Indirizzo o hostname del server smtp -->
+		<host>smtp.gmail.com</host>
+
+		<!-- Porta TCP del server smtp -->
+		<port>465</port>
+
+		<!-- Nome del mittente -->
+		<sender-name>Default sender name</sender-name>
+
+		<!-- Indirizzo email del mittente -->
+		<sender-address>email@demo.it</sender-address>
+
+		<!-- Autenticazione richiesta -->
+		<authentication>1</authentication>
+
+		<!-- Imposta la modalità di autenticazione Va indicato uno dei seguenti
+			valori: LOGIN, PLAIN, NTLM (default LOGIN) -->
+		<auth-type></auth-type>
+
+		<!-- Username per eventuale autenticazione richiesta dal server smtp -->
+		<auth-username>info@demo.it</auth-username>
+
+		<!-- Password per eventuale autenticazione richiesta dal server smtp -->
+		<auth-password>smtlpass</auth-password>
+
+		<!-- Modalità di criptazione (tsl, ssl oppure lasciare vuoto) -->
+		<encryption>ssl</encryption>
+
+		<!-- Timeout server -->
+		<timeout>90</timeout>
+	</mail>
+
+	<!-- Profili di parametrizzazione. L'eventuale profilo va impostato come
+		variabile d'ambiente nel webserver e le proprietà specificate per un profilo
+		offuscano quelle globali -->
+	<profiles>
+		<profile id="development">
+			<php>
+				<date.timezone>Europe/Rome</date.timezone>
+				<display_errors>on</display_errors>
+				<error_reporting>22527</error_reporting>
+			</php>
+
+
+
+			<!-- Parametri relativi al db -->
+			<persistence>
+
+				<!-- Hash per offuscamento password -->
+				<salt>DEVSALT</salt>
+
+				<db_dataobject>
+					<!-- Stringa per connessione al dbms -->
+					<database>pgsql://dbuser:pass@localhost/demo</database>
+
+					<schema_location>${app.confdir}</schema_location>
+					<require_prefix>${app.libdir}/demo/db</require_prefix>
+					<class_prefix></class_prefix>
+					<db_driver>MDB2</db_driver>
+					<!-- <ignore_sequence_keys>ALL</ignore_sequence_keys> -->
+					<debug>0</debug>
+					<dont_die>0</dont_die>
+					<quote_identifiers>1</quote_identifiers>
+					<!-- <proxy></proxy> -->
+				</db_dataobject>
+
+				<db_dataobject_generator>
+					<class_location>${app.libdir}/demo/db</class_location>
+					<extends>DBObject</extends>
+					<extends_location>${app.libdir}/demo/db</extends_location>
+					<generator_class_rewrite>0</generator_class_rewrite>
+					<build_views>0</build_views>
+					<generator_exclude_regex>/.*_seq$/</generator_exclude_regex>
+					<generator_strip_schema>/public/</generator_strip_schema>
+					<generator_novars>0</generator_novars>
+					<generator_add_validate_stubs>0</generator_add_validate_stubs>
+				</db_dataobject_generator>
+
+			</persistence>
+
+		</profile>
+	</profiles>
+</configuration>
