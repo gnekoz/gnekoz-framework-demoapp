@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+
+@import url("common.css");
+
+
+h1 {
+	font-size: 2.5em;
+}
+
+#content h1
+{
+    padding: 7px 10px;
+    background-color: #fff0be;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+a {
+	color: #da0000;
+	text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#content {
+	margin-top: 20px;
+}
+
+#top-menu {
+    margin: 5px;    
+    padding-left: 30px;
+    background: transparent url("../images/icons/user_minimal.png") no-repeat left center;
+    float: right;
+}
+
+#top-menu ul {
+    margin-left: 5px;
+    display: inline;
+    list-style: none;
+}
+
+#top-menu li {
+    display: inline;
+    padding: 0 12px;
+    border-left: 1px dotted #333;
+}
+
+
+#main-menu ul ul {
+	display: none;
+}
+
+#main-menu ul li:hover > ul {
+    display: block;
+}
+
+#main-menu ul {
+	background: #bbbbbb; 
+	background: linear-gradient(top, #cecece 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #cecece 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #cecece 0%,#bbbbbb 100%); 
+	/*box-shadow: 0px 0px 9px rgba(0,0,0,0.15);*/
+	padding: 0 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;    
+	border-radius: 5px;
+	list-style: none;
+	position: relative;
+	display: block; /*inline-table;*/
+}
+
+/*
+#main-menu ul:after {
+    content: ""; clear: both; display: block;
+}
+*/
+
+
+#main-menu ul li {
+	float: left;
+}
+
+#main-menu ul li:hover {
+    background: #4b545f;
+    background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+}
+
+#main-menu ul li:hover a {
+    color: #fff;
+}
+	
+#main-menu ul li a {
+    display: block; 
+    padding: 7px 40px;
+    color: #666; 
+    text-decoration: none;
+}
+
+
+#main-menu ul ul {
+    background: #5f6975; 
+    border-radius: 0px; 
+    padding: 0;
+    position: absolute; 
+    top: 100%;
+}
+
+#main-menu ul ul li {
+    float: none; 
+    border-top: 1px solid #6b727c;
+    border-bottom: 1px solid #575f6a;
+    position: relative;
+}
+    
+#main-menu ul ul li a {
+    padding: 7px 40px;
+    color: #fff;
+}	
+
+#main-menu ul ul li a:hover {
+    background-color: #4b545f;
+}
+
+#main-menu ul ul ul {
+	position: absolute; left: 100%; top:0;
+}
+
+.menu-item {
+	background-color: transparent;
+        padding-left: 30px;	
+	text-align: left;
+	background-position: 8px center;
+	background-repeat: no-repeat;	    
+}
+
+#main-menu .chiamate {
+	background-image: url("../images/icons/telephone.png");
+}
+
+#main-menu .consumi {
+    background-image: url("../images/icons/cart.png");
+}
+
+#main-menu .budget {
+    background-image: url("../images/icons/chart_bar.png");
+}
+
+#main-menu .prodotti {
+    background-image: url("../images/icons/bricks.png");
+}
+
+#main-menu .consuntivazione {
+    background-image: url("../images/icons/time.png");
+}
+
+#main-menu .report {
+    background-image: url("../images/icons/report.png");
+}
+
+#main-menu .logout {
+    background-image: url("../images/icons/door_out.png");
+}
+
+#main-menu .utenti {
+    background-image: url("../images/icons/group.png");
+}
+
+#main-menu .uffici {
+    background-image: url("../images/icons/building.png");
+}

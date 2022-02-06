@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+
+* {
+ margin: 0;
+ padding: 0; 
+}
+
+body {
+  margin: 0;
+  padding: 20px 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.8em;
+  color: #333333;
+}
+
+/* float clearing for IE6 */
+* html .clearfix{
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+
+.error,
+.error-list {
+  display: inline-block;  
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; 
+  background: #ffa73f url("../images/icons/error.png") no-repeat 20px center;
+  padding: 30px 60px;
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+.error-list {
+  list-style-type: none; 
+}

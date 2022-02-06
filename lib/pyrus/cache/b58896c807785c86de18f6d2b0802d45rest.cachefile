@@ -1,0 +1,52 @@
+a:16:{s:7:"attribs";a:4:{s:5:"xmlns";s:37:"http://pear.php.net/dtd/rest.release2";s:9:"xmlns:xsi";s:41:"http://www.w3.org/2001/XMLSchema-instance";s:11:"xmlns:xlink";s:28:"http://www.w3.org/1999/xlink";s:18:"xsi:schemaLocation";s:83:"http://pear.php.net/dtd/rest.release2     http://pear.php.net/dtd/rest.release2.xsd";}s:1:"p";a:2:{s:7:"attribs";a:1:{s:10:"xlink:href";s:21:"/rest/p/db_dataobject";}s:8:"_content";s:13:"DB_DataObject";}s:1:"c";s:12:"pear.php.net";s:1:"v";s:6:"1.10.0";s:1:"a";s:5:"1.9.0";s:2:"mp";s:3:"4.3";s:2:"st";s:6:"stable";s:1:"l";s:16:"PHP License 3.01";s:1:"m";s:6:"alan_k";s:1:"s";s:51:"An SQL Builder, Object Interface to Database Tables";s:1:"d";s:356:"DataObject performs 2 tasks:
+  1. Builds SQL statements based on the objects vars and the builder methods.
+  2. acts as a datastore for a table row.
+  The core class is designed to be extended for each of your tables so that you put the
+  data logic inside the data classes.
+  included is a Generator to make your configuration files and your base classes.";s:2:"da";s:19:"2012-04-27 11:30:35";s:1:"n";s:2728:"Major feature and fix release.
+
+
+  #----- - Fix transactions - query(BEGIN) did not actually run when called.
+  #----- - Refactor Link and join code 
+      - link code moved to DB_DataObject_Link, new option generate_link_methods, new method link()
+      - make the links option work with autojoin, add setter feature to links()
+      - support links option on autojoin
+      - add support for excluded columns on autoJoin
+      - more detailed check on assigning numbers in link()
+      - new link syntax in generated methods
+      - make links() support same array syntax as joinAdd(), and change links() to
+          support input as func_get_args() for the second argument, cleans up wrapper code..
+      - support joinAdd(array("local_col", $dataObject, "remote_col"), "LEFT"), 
+          extra debugging on count(), and case sensitive checking on numRows (not sure if that was needed..)
+
+  #----- - remove notes relating to MDB as they are not relivant anymore
+  #----- - SVN/git has new directory layout
+ 
+
+  #----- - Add pid() - a quick way to get the value from the primary "id" column of the database
+  #----- - add sqlValue() - a factory method to create a DB_DataObject_Cast Object
+  #----- - nice warning on failed to write to temporary file
+  #----- - fixes to correctly support portability in selectAs()
+  #----- - fixes to correctly support portability in joinAdd
+
+  #----- - lower case links and ini during load, when portability set, fix handling in joinAdd
+
+    
+  #----- - add experimental support for posgresql introspected native keys
+
+  #----- - move assignment to error in raiseError after it actually happens, this should
+             ensure _lastError gets set correctly as the aliased setting does not appear to 
+             work very well..
+  #----- -  find() will return false when an error occurs (rather than 0)
+  #18995 - Remove error_reporting settings from tests (closes bug #18995).
+  #18931 - typos in comments - rasmus would appreciate this one... (depreciated to depricated)
+  #----- - support ini_database in foreign key generation, and regex matching on strip schema
+  #----- - document change to generator_strip_schema which now supports regexp to strip from
+           matching schemas
+  #----- - add support for portability in tableName() - most references to tablename will
+             now call tablename, so that code working on mysql can work on postgres, 
+             where tables are mixed case in mysql.
+  #----- - document build_views change
+  #----- - support _TEXT type (postgres view returns this.)
+  #----- - support build_views=schema.views for building dataobjects from views with schemas
+  #18767 - use argv0 for the usage line, and ensure that is is run from cli sapi";s:1:"f";s:5:"78487";s:1:"g";s:44:"http://pear.php.net/get/DB_DataObject-1.10.0";s:1:"x";a:1:{s:7:"attribs";a:1:{s:10:"xlink:href";s:18:"package.1.10.0.xml";}}}

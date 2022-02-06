@@ -1,0 +1,13 @@
+a:16:{s:7:"attribs";a:4:{s:5:"xmlns";s:37:"http://pear.php.net/dtd/rest.release2";s:9:"xmlns:xsi";s:41:"http://www.w3.org/2001/XMLSchema-instance";s:11:"xmlns:xlink";s:28:"http://www.w3.org/1999/xlink";s:18:"xsi:schemaLocation";s:83:"http://pear.php.net/dtd/rest.release2     http://pear.php.net/dtd/rest.release2.xsd";}s:1:"p";a:2:{s:7:"attribs";a:1:{s:10:"xlink:href";s:25:"/rest/p/mdb2_driver_pgsql";}s:8:"_content";s:17:"MDB2_Driver_pgsql";}s:1:"c";s:12:"pear.php.net";s:1:"v";s:5:"1.4.1";s:1:"a";s:5:"1.4.1";s:2:"mp";s:5:"4.3.0";s:2:"st";s:6:"stable";s:1:"l";s:11:"BSD License";s:1:"m";s:5:"quipo";s:1:"s";s:17:"pgsql MDB2 driver";s:1:"d";s:35:"This is the PostgreSQL MDB2 driver.";s:2:"da";s:19:"2007-05-03 14:57:06";s:1:"n";s:795:"- return length as "precision,scale" for NUMERIC and DECIMAL fields in mapNativeDatatype()
+- more accurate field size information in getTableFieldDefinition() in the
+  Reverse module
+- in getTableIndexDefinition() and getTableConstraintDefinition() in the Reverse
+  module, also return the field position in the index/constraint
+- Request #9106: more accurate sequence name retrieval routine in getSequenceName()
+- fixed bug #10895: setLimit() does not work properly when a subquery uses LIMIT
+
+open todo items:
+- enable pg_execute() once issues with bytea column are resolved
+- use pg_result_error_field() to handle localized error messages (Request #7059)
+- add option to use unnamed prepared statements
+  (see http://www.postgresql.org/docs/current/static/protocol-flow.html "Extended Query")";s:1:"f";s:5:"33839";s:1:"g";s:47:"http://pear.php.net/get/MDB2_Driver_pgsql-1.4.1";s:1:"x";a:1:{s:7:"attribs";a:1:{s:10:"xlink:href";s:17:"package.1.4.1.xml";}}}

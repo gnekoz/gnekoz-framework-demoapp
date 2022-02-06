@@ -1,0 +1,140 @@
+@CHARSET "UTF-8";
+
+table {
+	border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+	font-weight: bold;
+	background-color: #bbdff4;
+    border-bottom: 0px solid #999;
+}
+
+th,
+td {
+	text-align: left;
+	padding: 2px 10px;
+	margin: 0;	
+	border: 0;
+}
+
+th {
+	height: 25px;
+}
+
+tbody tr.odd {
+    background-color: white;
+}
+
+tbody tr.even {
+	background-color: #f3f3f3;
+}
+
+tfoot tr {
+	background-color: #e5e1c4;	
+}
+
+tfoot td {
+	text-align: center;
+	height: 33px;
+}
+
+.table-page-link {
+  line-height: 25px;
+  padding: 3px 20px;
+}
+
+.next-page {
+	padding-right: 20px;
+	background: transparent url("../images/icons/resultset_next.png") no-repeat right center;
+}
+
+.prev-page {
+  padding-left: 20px;
+  background: transparent url("../images/icons/resultset_previous.png") no-repeat left center;
+}
+
+td {
+	height: 22px;
+}
+
+.row-add,
+.row-icon-link {
+  background-color: transparent;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 24px;
+  cursor: pointer;  
+}
+
+.row-edit {
+	background-image: url("../images/icons/pencil.png");
+}
+
+.row-delete {
+  background-image: url("../images/icons/delete.png");
+}
+
+.row-add {
+	line-height: 30px;
+	background-image: url("../images/icons/add.png");
+}
+
+.send-email {
+	background-image: url("../images/icons/email.png");
+}
+
+.send-whatsapp {
+	background-image: url("../images/icons/whatsapp.png");
+}
+
+.email-sent {
+	background-image: url("../images/icons/email_go.png");
+}
+
+.group1 {
+    background-color: #F2F7FD;
+    border-right: 1px dotted black;
+}
+
+.group2 {
+	background-color: #B8D0EC;
+}
+
+.group3 {
+    background-color: #F8E4CC;
+}
+
+.group4 {
+    background-color: #DEECFD;
+}
+
+.group5 {
+    background-color: #B3CAE5;
+}
+
+#consuntivazioni-table thead {	
+    background-color: inherit;
+    border-bottom: 1px dotted black;	
+}
+
+#consuntivazioni-table thead td {
+	text-align: center;
+}
+
+#consuntivazioni-table tfoot {
+    background-color: inherit;
+    border-top: 1px dotted black;    
+}
+
+
+#consuntivazioni-table input[type="text"] {
+	border: 0;
+	background: transparent;
+	font-family: 0.8em;
+}
+
+tr.disabled {
+    color: #aaa;
+}

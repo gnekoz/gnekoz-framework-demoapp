@@ -1,0 +1,177 @@
+@CHARSET "UTF-8";
+
+form ol
+{
+    list-style: none;
+    margin-top: 20px;
+}
+
+form ol li {
+    margin: 0;
+    padding: 5px 0;
+    clear: left;
+}
+
+label {
+    vertical-align: top;
+    display: block;
+    float: left;	
+    line-height: 20px;
+    padding: 4px 20px 4px 4px;
+    font-weight: bold;
+}
+
+fieldset {
+    margin: 10px 30px 10px 0;
+    border: 1px solid #bbb;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    padding: 10px;
+    display: inline-block;    	
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #aaa;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 4px;
+    display: block;  
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    background-color: white;
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+    display: inline;
+    margin: 0 7px;
+}
+
+select {
+    min-width: 200px;	
+}
+
+
+input[type="button"],
+input[type="submit"],
+button,
+.generic-button {		
+    height: 30px;
+    padding: 4px 35px;
+    color: #222;
+    cursor: pointer;
+    font-size: 1em;	
+    font-weight: normal;
+    background-color: #eee;
+    border: 1px #ccc solid;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;		
+}
+
+.icon-button {
+    padding: 4px 35px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+
+.button-link {
+    padding: 0px 35px;
+    display: block;
+    line-height: 28px;
+}
+
+.report-list {
+    list-style: none;
+}
+
+.report-list li {
+    margin: 20px 0;
+}
+
+.report-link {
+    font-size: 1.1em;
+    padding: 4px 35px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+
+.create-xls {
+    background-image: url("../images/icons/page_excel.png");    
+}
+
+.save-form {
+    background-image: url("../images/icons/disk.png");	
+}
+
+.search-form {
+    background-image: url("../images/icons/find.png");
+}
+
+optgroup {
+    font-style: normal;
+    font-weight: bold;
+    font-size: inherit;
+}
+
+option {
+    padding-left: 3px;
+}
+
+.search-filters {
+    display: inline-block;
+    list-style: none;	
+    padding: 5px 10px;    
+    /*background-color: #ddd;*/
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;	
+}
+
+.search-filters li {
+    float: left;
+}
+
+#profile-form dl {
+    margin: 10px 0;
+}
+
+#profile-form dt,
+#profile-form dd {
+    padding: 7px 20px 7px 0; 
+    float: left;
+}
+
+#profile-form dt {
+    clear: left;
+    font-weight: bold;
+    width: 120px;
+}
+
+#chiamata-form #note {
+    width: 580px;
+}
+
+
+#contatto-form #note {
+    width: 580px;
+}
+
+#contatto-form #data {
+    width: 100px;
+}
+
+#contatto-form #id_maximizer {
+    width: 120px;
+}
